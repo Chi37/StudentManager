@@ -9,7 +9,7 @@ def get_student_name():
 def get_students_titlecase():
 	students_titlecase = []
 	for student in students:
-		students_titlecase = student["name"].title()
+		students_titlecase.append(student["name"].title())
 	return students_titlecase
 
 
@@ -47,8 +47,8 @@ def read_file():
 		f = open("students.txt","r")
 		for student in f.readlines():
 			add_student(student)
-			print("reading...")
 		f.close()
+		print("reading...")
 	except Exception:
 		print("could not read file")
 
